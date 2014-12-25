@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+typedef void(^viewBLock)(UIView *);
+
 @interface ViewController ()
 
 @end
@@ -16,7 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    viewBLock addBorder = ^(UIView *view){
+        view.layer.borderColor = [[UIColor blackColor] CGColor];
+        view.layer.borderWidth = 0.5;
+    };
+    addBorder(self.view1);
+    addBorder(self.view2);
+    addBorder(self.view3);
+    addBorder(self.view4);
+
 }
 
 - (void)didReceiveMemoryWarning {

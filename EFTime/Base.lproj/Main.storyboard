@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0RU-WK-sjE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--时间矩阵-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -16,21 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYZ-nr-aKB">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYZ-nr-aKB">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.73725490199999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyo-Ar-DNG">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyo-Ar-DNG">
                                 <rect key="frame" x="300" y="0.0" width="300" height="300"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-Tj-Cir">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-Tj-Cir">
                                 <rect key="frame" x="0.0" y="300" width="300" height="300"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-la-lrN">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-la-lrN">
                                 <rect key="frame" x="300" y="300" width="300" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -48,8 +48,8 @@
                             <constraint firstItem="wyo-Ar-DNG" firstAttribute="width" secondItem="4wd-Tj-Cir" secondAttribute="width" id="W2J-Pz-Z1G"/>
                             <constraint firstItem="mY0-la-lrN" firstAttribute="leading" secondItem="4wd-Tj-Cir" secondAttribute="trailing" id="YBX-qi-3gG"/>
                             <constraint firstItem="wyo-Ar-DNG" firstAttribute="width" secondItem="mY0-la-lrN" secondAttribute="width" id="fxW-73-Xn1"/>
-                            <constraint firstItem="wyo-Ar-DNG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g0k-tG-UKn"/>
-                            <constraint firstItem="hYZ-nr-aKB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h2t-9f-Z3S"/>
+                            <constraint firstItem="wyo-Ar-DNG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="g0k-tG-UKn"/>
+                            <constraint firstItem="hYZ-nr-aKB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="h2t-9f-Z3S"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4wd-Tj-Cir" secondAttribute="bottom" id="imV-5e-2dD"/>
                             <constraint firstItem="wyo-Ar-DNG" firstAttribute="height" secondItem="hYZ-nr-aKB" secondAttribute="height" id="sH0-3d-kos"/>
                             <constraint firstItem="4wd-Tj-Cir" firstAttribute="top" secondItem="hYZ-nr-aKB" secondAttribute="bottom" id="tJF-ga-u9D"/>
@@ -59,10 +59,75 @@
                             <constraint firstItem="4wd-Tj-Cir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zpe-wx-ijz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="时间矩阵" id="d0p-8M-U8d"/>
+                    <connections>
+                        <outlet property="view1" destination="hYZ-nr-aKB" id="LzP-W6-dNw"/>
+                        <outlet property="view2" destination="wyo-Ar-DNG" id="dxw-a5-Unx"/>
+                        <outlet property="view3" destination="4wd-Tj-Cir" id="igp-9d-GAg"/>
+                        <outlet property="view4" destination="mY0-la-lrN" id="K53-Bj-WuL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="353"/>
+            <point key="canvasLocation" x="314" y="272"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="thH-oa-b94">
+            <objects>
+                <viewController id="oUu-Tp-CIR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZB-m2-f3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="lTa-Do-unT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8yJ-yj-EUH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="fLS-Ac-ynF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hA9-Dq-LWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="1774"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="uYC-ns-loU">
+            <objects>
+                <viewController id="XZd-rg-k7M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqp-bN-F40"/>
+                        <viewControllerLayoutGuide type="bottom" id="7hr-fd-3Kk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TSe-It-F7W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="rnL-VF-RBA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8P-AB-Bwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="1024"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AIR-Nf-L8d">
+            <objects>
+                <tabBarController id="0RU-WK-sjE" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cfk-Be-heg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hFy-YD-vtL"/>
+                        <segue destination="XZd-rg-k7M" kind="relationship" relationship="viewControllers" id="oXt-RK-UUD"/>
+                        <segue destination="oUu-Tp-CIR" kind="relationship" relationship="viewControllers" id="86o-hE-aje"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tu0-Dy-P2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="1024"/>
         </scene>
     </scenes>
 </document>
