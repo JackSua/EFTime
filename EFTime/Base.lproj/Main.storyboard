@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="314" y="272"/>
         </scene>
-        <!--Item 2-->
+        <!--图表-->
         <scene sceneID="thH-oa-b94">
             <objects>
                 <viewController id="oUu-Tp-CIR" sceneMemberID="viewController">
@@ -84,13 +84,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="fLS-Ac-ynF"/>
+                    <tabBarItem key="tabBarItem" title="图表" id="fLS-Ac-ynF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA9-Dq-LWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="1774"/>
+            <point key="canvasLocation" x="-460" y="1847"/>
         </scene>
-        <!--Item 1-->
+        <!--设置-->
+        <scene sceneID="I5W-is-jGF">
+            <objects>
+                <tableViewController id="xSJ-e9-2IG" customClass="SettingTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aqj-HW-NY5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellIdentifier" id="q0f-dI-8pL">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0f-dI-8pL" id="oQu-vQ-4mH">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xSJ-e9-2IG" id="dh5-tC-YEJ"/>
+                            <outlet property="delegate" destination="xSJ-e9-2IG" id="9h6-9X-waz"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="设置" id="j0h-j5-b7U"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTM-FV-F4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="1817"/>
+        </scene>
+        <!--收集箱-->
         <scene sceneID="uYC-ns-loU">
             <objects>
                 <viewController id="XZd-rg-k7M" sceneMemberID="viewController">
@@ -103,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rnL-VF-RBA"/>
+                    <tabBarItem key="tabBarItem" title="收集箱" id="rnL-VF-RBA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8P-AB-Bwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +150,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hFy-YD-vtL"/>
                         <segue destination="XZd-rg-k7M" kind="relationship" relationship="viewControllers" id="oXt-RK-UUD"/>
                         <segue destination="oUu-Tp-CIR" kind="relationship" relationship="viewControllers" id="86o-hE-aje"/>
+                        <segue destination="xSJ-e9-2IG" kind="relationship" relationship="viewControllers" id="I3J-P2-ozt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tu0-Dy-P2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
